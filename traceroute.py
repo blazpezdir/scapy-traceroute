@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 from scapy.all import *
-import time
 
 host = "google.com";
 MAX_HOPS = 100
