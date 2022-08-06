@@ -3,7 +3,7 @@ from scapy.all import *
 import time
 
 host = "google.com";
-maxHops = 100
+MAX_HOPS = 100
 
 # Build IP layer
 a = IP()
@@ -15,11 +15,11 @@ b = ICMP()
 print("Target: %s" % a.dst)
 
 # For each hop across routers (TTL decreseas by 1 each time routing happens)
-for ttl in range(1, maxHops):
+for ttl in range(1, MAX_HOPS):
     # Set TTL
     a.ttl = ttl
     # Stack layers together
-    p = a / b
+    p = a / bgi
 
     # Send packet and listen for response
     response = sr1(p, verbose=0, timeout=2)
