@@ -19,7 +19,7 @@ for ttl in range(1, MAX_HOPS):
     # Set TTL
     a.ttl = ttl
     # Stack layers together
-    p = a / bgi
+    p = a / b
 
     # Send packet and listen for response
     response = sr1(p, verbose=0, timeout=2)
